@@ -1,0 +1,23 @@
+
+.texto-portada{
+    font-size: 130px;
+    line-height: 1;
+}
+
+.texto-portada-var{
+    color:var(--secondary-color)
+}
+
+.texto-menu{
+    font-size: 100px;
+    margin-top: 10vh;
+}
+
+.texto-menu-link{
+    line-height: 1;
+    text-align: right;
+}
+
+.texto-menu-contacto{
+    font-size: 1.5em;
+}
