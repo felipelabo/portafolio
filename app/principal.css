@@ -1,4 +1,6 @@
 
+/*TEXTO*/
+
 .texto-portada{
     font-size: 130px;
     line-height: 1;
@@ -20,4 +22,61 @@
 
 .texto-menu-contacto{
     font-size: 1.5em;
+}
+
+.texto-titulos{
+    font-size: 80px;
+}
+
+/*CARD WORK*/
+
+.card-work{
+    border-color: var(--secondary-color);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    color: var(--secondary-color)
+}
+
+.card-boton{
+    border-color: var(--secondary-color);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+}
+
+.card-work .card-texto{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*CARD MYSELF*/
+
+.card-myself{
+    border-color: var(--secondary-color);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    color: var(--primary-color);
+    background-image: radial-gradient(
+        circle at center,
+        var(--secondary-color) 2px,
+        transparent 0
+        );
+    background-size: 8px 8px;
+    background-repeat: round;
+}
+
+.card-myself .card-body{
+    background: var(--bg-color);
+}
+
+.timeline-linea {
+    stroke: var(--secondary-color); 
+    stroke-width:2
+}
+
+.timeline-circle{
+    stroke: var(--secondary-color);
+    fill: var(--secondary-color)
 }

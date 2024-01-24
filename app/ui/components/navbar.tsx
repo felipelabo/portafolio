@@ -1,7 +1,7 @@
 
 export default function NavBar(){
     return (
-        <div className="absolute w-full flex mx-auto justify-between items-center p-2" style={{border:"1px solid black"}}>
+        <div className="absolute w-full flex mx-auto justify-between items-center p-2">
             {/*Logo*/}
             <div className="p-3 ml-2">
                 <h1 className="text-2xl">Felipe Laboren</h1>
