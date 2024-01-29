@@ -2,12 +2,17 @@
 /*TEXTO*/
 
 .texto-portada{
-    font-size: 130px;
+    font-size: 150px;
     line-height: 1;
+    font-weight: 800;
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 2px;
 }
 
 .texto-portada-var{
-    color:var(--secondary-color)
+    color:var(--secondary-color);
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 2px;
 }
 
 .texto-menu{
@@ -33,20 +38,42 @@
 .card-work{
     border-color: var(--secondary-color);
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
     border-radius: 15px;
     color: var(--secondary-color)
+}
+
+.card-work.expanded{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-style: solid;
+    border-width: 3px;
 }
 
 .card-boton{
     border-color: var(--secondary-color);
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
     border-radius: 15px;
+}
+
+.card-work.expanded .card-boton{
+    border-color: var(--primary-color);
 }
 
 .card-work .card-texto{
     font-size: 1.5em;
+    text-align: center;
+}
+
+.card-work.expanded .card-texto{
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.card-titulo{
+    font-size: 2em;
     text-align: center;
 }
 
@@ -55,7 +82,7 @@
 .card-myself{
     border-color: var(--secondary-color);
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
     border-radius: 15px;
     color: var(--primary-color);
     background-image: radial-gradient(
@@ -73,10 +100,57 @@
 
 .timeline-linea {
     stroke: var(--secondary-color); 
-    stroke-width:2
+    stroke-width:3
 }
 
 .timeline-circle{
     stroke: var(--secondary-color);
     fill: var(--secondary-color)
+}
+
+/*BANNER*/
+
+.bn-par{
+    color: var(--secondary-color);
+    font-size: 75px;
+}
+
+.bn-inpar{
+    color: var(--bg-color);
+    -webkit-text-stroke-color: var(--secondary-color);
+    -webkit-text-stroke-width: 1px;
+    font-size: 75px;
+}
+
+/*PORTADA*/
+
+.portada{
+    background-color: var(--secondary-color);
+    border-width: 3px;
+    border-radius: 15px;
+    border-color: var(--primary-color);
+}
+
+.bg-gradiente{
+    background: rgb(240,240,231);
+    background: radial-gradient(circle, rgba(240,240,231,1) 55%, rgba(0,0,0,0) 100%);
+}
+
+/* Navbar */
+
+.navbar-titulo{
+    background-color: var(--bg-color);
+    border-width: 3px;
+    border-radius: 15px;
+    border-color: var(--primary-color);
+    padding:2px 15px;
+    display:flex;
+    transform: rotate(0deg);
+}
+
+.navbar-button{
+    padding: 2px 15px;
+    font-size: 1.5em;
+    background-color: var(--bg-color);
+    transform: rotate(0deg);
 }

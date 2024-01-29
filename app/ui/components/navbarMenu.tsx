@@ -26,13 +26,13 @@ export default function Menu({handleShow,show}:Menu){
     ]
 
     const variant = {
-        hidden:{opacity:0, y:-20,transition:{duration:0.3}},
+        hidden:{opacity:0, y:-20,transition:{duration:0.2}},
         visible:{
             opacity:1, 
             y: 0,
             transition:{
                 duration:0.3,
-                delayChildren:0.2,
+                delayChildren:0.1,
                 staggerChildren:0.05,
                 staggerDirection:1
             }},
@@ -40,7 +40,7 @@ export default function Menu({handleShow,show}:Menu){
             opacity:0, 
             y:-20,
             transition:{
-                delay:0.15,
+                delay:0.1,
                 delayChildren:0.15,                
                 duration:0.2,
             }}
@@ -60,7 +60,7 @@ export default function Menu({handleShow,show}:Menu){
 
     return(
         <motion.div 
-            className="w-[100vw] h-[100vh] bg-[--secondary-color] absolute"
+            className="w-[100vw] h-[100vh] bg-[--secondary-color] absolute z-40"
             initial={"hidden"}
             animate={"visible"}
             exit={"exit"}

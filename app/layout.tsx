@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,Oswald,Lexend} from "next/font/google";
 import "./globals.css";
 
 import NavBar from '@/app/ui/components/navbar'
 
 const inter = Inter({ subsets: ["latin"] });
+const oswlad = Oswald({subsets:["latin"]});
 
 export const metadata: Metadata = {
   title: "Portafolio",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-[--bg-color] ${inter.className}`}>
+      <body className={`bg-[--bg-color] ${oswlad.className}`}>
         <NavBar/>
         {children}
       </body>
