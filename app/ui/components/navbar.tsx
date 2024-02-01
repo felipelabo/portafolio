@@ -1,7 +1,7 @@
 "use client"
 import Menu from "@/app/ui/components/navbarMenu"
 import {useState} from 'react'
-import {AnimatePresence} from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 import Link from 'next/link'
 
 export default function NavBar(){
@@ -12,15 +12,54 @@ export default function NavBar(){
         setShow(!show)
     }
 
+    const hover = {
+        init:{
+            x:5,
+            y:-5,
+            boxShadow: "-5px 5px 0px 0px rgba(0,0,0,1)",
+            transition:{
+                duration:0.2,
+                ease:'linear'
+            }
+        },
+        tap:{
+            x:0,
+            y:0,
+            boxShadow: "0px 0px 0px 0px rgba(0,0,0,1)",
+            transition:{
+                duration:0.2,
+                ease:'linear'
+            }
+        },
+        hover:{
+            x:5,
+            y:-5,
+            boxShadow: "-5px 5px 0px 0px rgba(0,0,0,1)",
+            transition:{
+                duration:0.2,
+                ease:'linear'
+            }
+        },
+        
+    }
+
     return (
         <>
-            <div className="fixed w-full flex mx-auto justify-between items-center p-2 z-50">
+            <motion.div className="fixed w-full flex mx-auto justify-between items-center p-2 z-50">
                 {/*Logo*/}
-                <div className="p-3 ml-2">
-                    <Link href={'/'} className="navbar-titulo text-2xl">Felipe Laboren</Link>
-                </div>
-                <button
-                    className={`navbar-button flex justify-center items-center mr-3 border-[3px] ${show ? 'border-[--primary-color]' : 'border-[--secondary-color]'} rounded-[15px]`}
+                <motion.div className="p-3 ml-2">
+                    <motion.button
+                        className="navbar-titulo text-2xl"
+                        variants={hover}
+                        whileTap={'tap'}
+                        initial={false}
+                        whileHover={'hover'}
+                    >
+                        <Link href={'/'}>Felipe Laboren</Link>
+                    </motion.button>
+                </motion.div>
+                <motion.button
+                    className={`navbar-button flex justify-center items-center mr-3  ${show ? 'border-[--primary-color]' : 'border-[--bg-color]' } border-[3px] rounded-[15px] transform transition-all duration-[100ms] `}
                     onClick={handleShow}
                 >
                 {/*<button 
@@ -33,8 +72,8 @@ export default function NavBar(){
                         <div className={` ${show ? 'bg-[--primary-color]' : 'bg-[--secondary-color]'} h-[3px] w-9 rounded transform transition-all duration-300 group-focus:translate-x-10`}></div>
                         <div className={` ${show ? 'bg-[--primary-color]' : 'bg-[--secondary-color]'} h-[3px] w-9 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg] group-focus:w-2/3 delay-150`}></div>
                     </div>*/}
-                </button>
-            </div>
+                </motion.button>
+            </motion.div>
             <AnimatePresence>
                 {show && <Menu handleShow={handleShow} show={show}/>}
             </AnimatePresence>            

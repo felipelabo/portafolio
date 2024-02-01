@@ -40,7 +40,7 @@ export default function Work(){
     }
     
     return(
-        <motion.div layout layoutRoot className='w-[80svw] mt-[8svh] flex flex-wrap justify-center overflow-scroll max-h-[55svh]'>
+        <motion.div layout layoutRoot className='w-[80svw] mt-[5svh] flex flex-wrap justify-center overflow-scroll max-h-[55svh] p-[20px]'>
             
             {trabajos.map(item=>{
                 return(
@@ -49,6 +49,7 @@ export default function Work(){
                         texto={item.titulo}
                         boton={item.boton}
                         selectId={selectId}
+                        selected={selectedId}
                         width="30%"
                     ></CardWork>
                 )
@@ -56,7 +57,7 @@ export default function Work(){
 
             <AnimatePresence>
                 {selectedId && item && 
-                    <motion.div layoutId={item.id} className={`card-work expanded flex flex-wrap mx-[10px] mb-[15px] w-[80svw] h-[55svh] p-[15px] absolute`}>
+                    <motion.div key={`modal_${item.id}`} layoutId={item.id} className={`card-work expanded flex flex-wrap mx-[10px] mb-[15px] w-[80svw] h-[55svh] p-[15px] absolute`}>
                         <motion.div className="card.header w-full">
                             <motion.h1 className="card-titulo">{item.titulo}</motion.h1>
                         </motion.div>                        

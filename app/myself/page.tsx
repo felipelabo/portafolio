@@ -21,10 +21,13 @@ export default function Myself(){
     return(
         <div className='w-full mt-[8svh] flex h-full'>
             <div className="w-2/3 flex justify-center">
-                <div className="card-myself w-[60%] h-[80%] p-[40px]">
+                {/*<div className="card-myself w-[60%] h-[80%] p-[40px]">
                     <div className="card-body h-full p-[8px]">
                         <p>{texto}</p>
                     </div>
+                </div>*/}
+                <div className="about-texto h-full px-[30px]">
+                    <p>{texto}</p>
                 </div>
             </div>
             <div className="w-1/3">

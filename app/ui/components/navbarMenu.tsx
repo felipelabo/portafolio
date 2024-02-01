@@ -16,7 +16,7 @@ export default function Menu({handleShow,show}:Menu){
         {id:1,name:'Inicio',link:'/'},
         {id:2,name:'Trabajos',link:'/work'},
         {id:3,name:'Conocimientos',link:'/knowledge'},
-        {id:4,name:'Sobre mi',link:'/myself'}
+        {id:4,name:'Sobre Mi',link:'/myself'}
     ]
 
     const contacto:{[key:string]:string | number}[] = [
@@ -49,7 +49,8 @@ export default function Menu({handleShow,show}:Menu){
     const linkVariant = {
         hidden:{opacity:0, x:15},
         visible: {opacity:1, x:0},
-        exit:{opacity:0}
+        exit:{opacity:0},
+        hover:{x:-5,transition:{type: "spring", stiffness: 200}}
     }
 
     const redesVariant = {
@@ -80,9 +81,15 @@ export default function Menu({handleShow,show}:Menu){
                 <motion.div className="w-2/3 h-[90vh] mt-[10vh]">
                     <motion.ul className="texto-menu mr-[2vw]">
                         {items.map((item)=>{
-                            return <motion.li variants={linkVariant} className={`texto-menu-link ${ pathname == item.link && 'text-[--bg-color]' }`}>
-                                        <Link href={item.link} onClick={handleShow}>{item.name}</Link>
-                                    </motion.li>
+                            return (
+                                <motion.li 
+                                    variants={linkVariant} 
+                                    className={`texto-menu-link ${ pathname == item.link && 'text-[--bg-color]' }`}
+                                    whileHover={'hover'}
+                                >
+                                    <Link href={item.link} onClick={handleShow}>{item.name}</Link>
+                                </motion.li>
+                            )
                         })}
                     </motion.ul>
                 </motion.div>
