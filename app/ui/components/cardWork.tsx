@@ -47,7 +47,7 @@ export default function CardWork({width,texto,boton,id,selected,selectId}:CardWo
             <motion.div 
                 key={id} 
                 layoutId={id} 
-                className={`card-work mx-[10px] flex justify-center mb-[15px] w-[30%] cursor-pointer`}
+                className={`card-work mx-[10px] flex justify-center mb-[15px] sm:w-[30%] w-[80%] cursor-pointer`}
                 onClick={()=>selectId(id)}
                 variants={hover}
                 whileHover={!selected ? 'hover' : 'tap'}

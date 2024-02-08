@@ -28,7 +28,7 @@ export default function Banner({texto}:Banner){
           >
             <p className='inline-block'>
                 {nuevoTexto.map((item,i)=>{
-                    return <span className={`ml-4 ${i%2===0 ? 'bn-par' : 'bn-inpar'}`}>{`${item}`}</span>
+                    return <span key={`letra1_${i}`} className={`ml-4 ${i%2===0 ? 'bn-par' : 'bn-inpar'}`}>{`${item}`}</span>
                 })}
             </p>             
           </motion.div>
@@ -37,7 +37,7 @@ export default function Banner({texto}:Banner){
           >
             <p className='inline-block'>
                 {nuevoTexto.map((item,i)=>{
-                    return <span className={`ml-4 ${i%2===0 ? 'bn-par' : 'bn-inpar'}`}>{`${item}`}</span>
+                    return <span key={`letra2_${i}`} className={`ml-4 ${i%2===0 ? 'bn-par' : 'bn-inpar'}`}>{`${item}`}</span>
                 })}
             </p>              
           </motion.div>

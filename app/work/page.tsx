@@ -38,9 +38,13 @@ export default function Work(){
         setSelected(true)
         setSelectedId(id)
     }
+
+    const variantCard={
+
+    }
     
     return(
-        <motion.div layout layoutRoot className='w-[80svw] mt-[5svh] flex flex-wrap justify-center overflow-scroll max-h-[55svh] p-[20px]'>
+        <motion.div layout layoutRoot className='w-[80svw] mt-[5svh] flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center overflow-scroll sm:max-h-[55svh] max-h-[70svh] p-[20px]'>
             
             {trabajos.map(item=>{
                 return(
@@ -57,13 +61,13 @@ export default function Work(){
 
             <AnimatePresence>
                 {selectedId && item && 
-                    <motion.div key={`modal_${item.id}`} layoutId={item.id} className={`card-work expanded flex flex-wrap mx-[10px] mb-[15px] w-[80svw] h-[55svh] p-[15px] absolute`}>
-                        <motion.div className="card.header w-full">
+                    <motion.div key={`modal_${item.id}`} layoutId={item.id} className={`card-work expanded flex flex-wrap mx-[10px] mb-[15px] sm:w-[80svw] w-[90svw] sm:h-[55svh] h-[70svh] p-[15px] absolute`}>
+                        <motion.div className="card-header w-full">
                             <motion.h1 className="card-titulo">{item.titulo}</motion.h1>
                         </motion.div>                        
                         <motion.div className="card-body w-full flex p-[15px] flex-col justify-between">
-                            <motion.div className="w-full max-h-[30svh] flex-1 overflow-scroll p-[10px]">
-                                <motion.p className="card-texto mb-[10px] text-justify">{item.texto}</motion.p>
+                            <motion.div className="w-full sm:max-h-[30svh] max-h-[40svh] flex-1 overflow-scroll p-[10px]">
+                                <motion.p className="sm:text-[1.7svw] text-[4svw] mb-[10px] text-justify">{item.texto}</motion.p>
                             </motion.div>
                             <motion.div className="w-full flex justify-center items-center  p-[10px]">
                                 <motion.button 

@@ -40,22 +40,21 @@ export default function Menu({handleShow,show}:Menu){
             opacity:0, 
             y:-20,
             transition:{
-                delay:0.1,
+                delay:0.3,
                 delayChildren:0.15,                
-                duration:0.2,
+                duration:0.5
             }}
     }
 
     const linkVariant = {
         hidden:{opacity:0, x:15},
         visible: {opacity:1, x:0},
-        exit:{opacity:0},
-        hover:{x:-5,transition:{type: "spring", stiffness: 200}}
+        exit:{opacity:0}
     }
 
     const redesVariant = {
         hidden:{opacity:0, x:-15},
-        visible: {opacity:1, x:0, transition:{delay:1}},
+        visible: {opacity:1, x:0, transition:{delay:0.3}},
         exit:{opacity:0}
     }
 
@@ -68,24 +67,25 @@ export default function Menu({handleShow,show}:Menu){
             variants={variant}
             transition={{ duration: 0.2}}
         >
-            <motion.div className="flex columns-2">
-                <motion.div className="w-1/3 h-[90vh] mt-[10vh]">
+            <motion.div className="flex flex-col sm:flex-row">
+                <motion.div className="sm:w-1/3 w-full sm:h-[90vh] h-[30svh] sm:order-[1] order-[2] sm:mt-[10vh]">
                     <motion.div className="flex flex-col items-star justify-end h-full">
                         <motion.ul className="texto-menu-contacto mb-[5vh] ml-[2vw]">
-                            {contacto.map(item=>{
-                                return <motion.li variants={redesVariant}>{item.name}</motion.li>
+                            {contacto.map((item,i)=>{
+                                return <motion.li key={`redes_${i}`} variants={redesVariant}>{item.name}</motion.li>
                             })}
                         </motion.ul>
                     </motion.div>                    
                 </motion.div>
-                <motion.div className="w-2/3 h-[90vh] mt-[10vh]">
-                    <motion.ul className="texto-menu mr-[2vw]">
-                        {items.map((item)=>{
+                <motion.div className="sm:w-2/3 w-full sm:h-[90vh] h-[60svh] sm:order-[2] order-[1] mt-[10vh] sm:px-[0px] px-[10px]">
+                    <motion.ul className="texto-menu mr-[2vw] sm:text-[7svw] text-[10svw]">
+                        {items.map((item,i)=>{
                             return (
                                 <motion.li 
+                                    key={`link_${i}`}
                                     variants={linkVariant} 
-                                    className={`texto-menu-link ${ pathname == item.link && 'text-[--bg-color]' }`}
-                                    whileHover={'hover'}
+                                    className={`texto-menu-link ${ pathname == item.link && 'text-[--bg-color]' } sm:mb-0 mb-[3svh]`}
+                                    whileHover={{x:-5,transition:{type: "spring", stiffness: 200}}}
                                 >
                                     <Link href={item.link} onClick={handleShow}>{item.name}</Link>
                                 </motion.li>

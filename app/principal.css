@@ -2,7 +2,7 @@
 /*TEXTO*/
 
 .texto-portada{
-    font-size: 170px;
+    font-size: 12svw;
     line-height: 1;
     font-weight: 800;
     -webkit-text-stroke-color: var(--primary-color);
@@ -16,7 +16,6 @@
 }
 
 .texto-menu{
-    font-size: 100px;
     margin-top: 10vh;
 }
 
@@ -29,9 +28,6 @@
     font-size: 1.5em;
 }
 
-.texto-titulos{
-    font-size: 100px;
-}
 
 .texto-titulos span{
     -webkit-text-stroke-color: var(--primary-color);
@@ -42,11 +38,12 @@
 /*CARD WORK*/
 
 .card-work{
-    border-color: var(--secondary-color);
+    border-color: var(--primary-color);
     border-style: solid;
     border-width: 3px;
     border-radius: 15px;
-    color: var(--secondary-color)
+    color: var(--bg-color);
+    background-color: var(--secondary-color);
 }
 
 /*.card-work:hover{
@@ -59,6 +56,10 @@
     border-color: var(--primary-color);
     border-style: solid;
     border-width: 3px;
+}
+
+.card-work.expanded .card-titulo{
+    color: var(--bg-color);
 }
 
 .card-boton{
@@ -118,23 +119,19 @@
     fill: var(--secondary-color)
 }
 
-.about-texto{
-    font-size: 25px;
-    text-align: justify;
-}
 
 /*BANNER*/
 
 .bn-par{
     color: var(--secondary-color);
-    font-size: 75px;
+    font-size: 5svw;
 }
 
 .bn-inpar{
     color: var(--bg-color);
     -webkit-text-stroke-color: var(--secondary-color);
     -webkit-text-stroke-width: 1px;
-    font-size: 75px;
+    font-size: 5svw;
 }
 
 /*PORTADA*/
@@ -148,7 +145,7 @@
 
 .bg-gradiente{
     background: rgb(240,240,231);
-    background: radial-gradient(circle, rgba(240,240,231,1) 60%, rgba(0,0,0,0) 100%);
+    background: radial-gradient(circle, rgba(240,240,231,1) 55%, rgba(0,0,0,0) 100%);
 }
 
 /* Navbar */
@@ -160,8 +157,8 @@
     border-color: var(--primary-color);
     padding:2px 15px;
     display:flex;
-    /*transform: translate(5px,-5px);
-    box-shadow:  -5px 5px 0px 0px rgba(0,0,0,1);*/
+    /*transform: translate(2px,-2px);*/
+    box-shadow:  -2px 2px 0px 0px rgba(0,0,0,1);
 }
 
 .navbar-button{
@@ -182,12 +179,15 @@
 .word-resalta{
     color: var(--secondary-color);
     cursor: pointer;
+    text-shadow: -2px 2px 0px var(--primary-color);
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 2px;
 }
 
 .filas-texto{
     font-size: 80px;
     overflow: hidden;
-    line-height: 1.35em;
+    /*line-height: 1.35em;*/
 }
 
 .filas-texto p{
@@ -196,8 +196,10 @@
 }
 
 .known-titulo{
-    font-size: 50px;
+    font-size: 70px;
     color:var(--secondary-color);
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 2px;
 }
 
 .known-texto{
@@ -214,5 +216,4 @@
     border-radius: 15px;
     border-color: var(--primary-color);
 }
-
 

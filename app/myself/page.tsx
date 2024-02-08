@@ -19,18 +19,18 @@ export default function Myself(){
     ]
 
     return(
-        <div className='w-full mt-[8svh] flex h-full'>
-            <div className="w-2/3 flex justify-center">
+        <div className='w-full mt-[8svh] flex sm:flex-row flex-col h-full'>
+            <div className="sm:w-2/3 w-full flex justify-center sm:mb-0 mb-[15px]">
                 {/*<div className="card-myself w-[60%] h-[80%] p-[40px]">
                     <div className="card-body h-full p-[8px]">
                         <p>{texto}</p>
                     </div>
                 </div>*/}
-                <div className="about-texto h-full px-[30px]">
+                <div className="sm:text-[1.7svw] text-[4.5svw] h-full px-[30px]">
                     <p>{texto}</p>
                 </div>
             </div>
-            <div className="w-1/3">
+            <div className="sm:w-1/3 w-full sm:px-0 px-[30px]">
                 <ul>
                     {timeline.map(item=>{
                         return (

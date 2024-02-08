@@ -18,23 +18,23 @@ export default function NavBar(){
             y:-5,
             boxShadow: "-5px 5px 0px 0px rgba(0,0,0,1)",
             transition:{
-                duration:0.2,
+                duration:0.1,
                 ease:'linear'
             }
         },
         tap:{
-            x:0,
-            y:0,
-            boxShadow: "0px 0px 0px 0px rgba(0,0,0,1)",
+            x:-2,
+            y:2,
+            boxShadow: "-0px 0px 0px 0px rgba(0,0,0,1)",
             transition:{
                 duration:0.2,
                 ease:'linear'
             }
         },
         hover:{
-            x:5,
-            y:-5,
-            boxShadow: "-5px 5px 0px 0px rgba(0,0,0,1)",
+            x:4,
+            y:-4,
+            boxShadow: "-4px 4px 0px 0px rgba(0,0,0,1)",
             transition:{
                 duration:0.2,
                 ease:'linear'
@@ -53,7 +53,7 @@ export default function NavBar(){
                         variants={hover}
                         whileTap={'tap'}
                         initial={false}
-                        whileHover={'hover'}
+                        
                     >
                         <Link href={'/'}>Felipe Laboren</Link>
                     </motion.button>
