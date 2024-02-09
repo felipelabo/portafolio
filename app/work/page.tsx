@@ -2,7 +2,7 @@
 import CardWork from "../ui/components/cardWork"
 import {useState, useEffect} from 'react'
 import {motion, AnimatePresence, useIsPresent} from 'framer-motion'
-import {circular, electronica} from '@/app/data/texto/work'
+import {circular, electronica, persona} from '@/app/data/texto/work'
 
 
 export default function Work(){
@@ -32,10 +32,12 @@ export default function Work(){
     let trabajos:Trabajos[] = [
         {id:'1-work',codigo:'EMP',anno:'Desde 2020',titulo:'Desarrollador Full-Stack en Circular HR',boton:'Esto es lo que hago',estado:true, texto:circular},
         {id:'2-work',codigo:'ING',anno:'Desde 2017',duracion:'3 años',titulo:'Ingeniero de Desarrollo en Unisource',boton:'Esto fue lo que hice',estado:true, texto:electronica},
+        {id:'3-work',codigo:'PER',anno:'2024',titulo:'Portafolio Profesional',boton:'Esto fue lo que hice',estado:true, texto:persona},
     ]
 
     const areas = [
-        {titulo:'Desarrollo Web', codigo:'EMP'},
+        {titulo:'Desarrollo Web - Empresa', codigo:'EMP'},
+        {titulo:'Desarrollo Web - Personales', codigo:'PER'},
         {titulo:'Ingeniero Electrónico', codigo:'ING'}
     ]
 

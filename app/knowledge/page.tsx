@@ -2,7 +2,7 @@
 import {motion, AnimatePresence} from 'framer-motion'
 import {useState, useEffect, useRef} from 'react'
 import useWindowResize from '@/app/ui/hooks/useWindowResize'
-import {variant, variantInfo, listaPalabras, contenido, palabras} from '@/app/data/texto/knowledge'
+import {variant, variantInfo, listaPalabras, contenido, palabras, Known, Contenido, Descripcion} from '@/app/data/texto/knowledge'
 
 const MAX_MOBILE_WIDTH = 600;
 
@@ -10,16 +10,6 @@ export default function Knownledge(){
 
     const [selectedId, setSelectedId] = useState<string|boolean>(false)
     const isMobile = useWindowResize(MAX_MOBILE_WIDTH);
-
-    interface Known {
-        texto:string,
-        resalta:number[]
-    }
-
-    interface Contenido {
-        palabra:string,
-        descripcion:string
-    }
 
     return (
         <motion.div className="w-[100svw] h-full overflow-scroll relative">
@@ -74,7 +64,15 @@ export default function Knownledge(){
                             <motion.div key={`info_${i}`} className='sm:px-[100px] px-[35px] overflow-scroll h-full w-full flex flex-col'>
                                 <motion.h1 className='known-titulo mb-[25px] text-[10svw] sm:text-[5.5svw]'>{item.palabra}</motion.h1>
                                 <motion.div className='overflow-scroll'>
-                                    <motion.p className='known-texto sm:text-[1.7svw] text-[4.5svw]'>{item.descripcion}</motion.p>
+                                    <motion.p className='known-texto sm:text-[1.7svw] text-[4.5svw] mb-[3svh]'>{item.texto}</motion.p>
+                                    {item.descripcion?.map((res:Descripcion,m)=>{
+                                        return (
+                                            <>
+                                                <motion.h1 className={`sm:text-[2.5svw] text-[4.5svw] text-[var(--secondary-color)]`}>{res.titulo}</motion.h1>
+                                                { res.descripcion && <motion.p className='sm:text-[1.7svw] text-[4.5svw] mb-[3svh]'>{res.descripcion}</motion.p>}
+                                            </>
+                                        )
+                                    })}
                                 </motion.div>
                                 <motion.button 
                                     className='known-boton my-[15px] w-fit self-center'

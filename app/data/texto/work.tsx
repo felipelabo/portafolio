@@ -25,3 +25,7 @@ Parte de mi trabajo:
 4. Realización de cálculos detallados para determinar el consumo energético y la autonomía de los equipos, garantizando su eficiencia operativa.
 5. Elaboración de diseños de PCB con el objetivo de optimizar el espacio en la electrónica, contribuyendo así a la eficacia y practicidad de los dispositivos.
 6. Participación activa en visitas a clientes y ejecución de la puesta en marcha de los proyectos, asegurando la correcta implementación de las soluciones propuestas.`;
+
+export const persona:string = `Como parte de mi compromiso con el aprendizaje continuo y la aplicación de nuevas herramientas, utilizo mi portafolio como un campo de pruebas para poner en práctica mis conocimientos. 
+
+En este proyecto utilicé el framework Next.js para desarrollar la interfaz de usuario, programando la aplicación en su totalidad con TypeScript. Además, empleé la librería Framer Motion para gestionar todas las animaciones presentes en la aplicación y aproveché el framework Tailwind CSS para la estructura y el diseño.`;
