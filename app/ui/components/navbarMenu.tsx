@@ -20,9 +20,10 @@ export default function Menu({handleShow,show}:Menu){
     ]
 
     const contacto:{[key:string]:string | number}[] = [
-        {id:1,name:'LinkedIn'},
-        {id:2,name:'Github'},
-        {id:3,name:'Instagram'}
+        {id:1,name:'LinkedIn',link:'https://www.linkedin.com/in/felipe-laboren-b69569127/'},
+        {id:2,name:'Github',link:'https://github.com/felipelabo'},
+        {id:3,name:'Instagram',link:'https://www.instagram.com/felipelabo/'},
+        {id:4,name:'Contacto',link:'mailto:felipelaboren93@gmail.com'}
     ]
 
     const variant = {
@@ -72,7 +73,11 @@ export default function Menu({handleShow,show}:Menu){
                     <motion.div className="flex flex-col items-star justify-end h-full">
                         <motion.ul className="texto-menu-contacto mb-[5vh] ml-[2vw]">
                             {contacto.map((item,i)=>{
-                                return <motion.li key={`redes_${i}`} variants={redesVariant}>{item.name}</motion.li>
+                                return (
+                                    <motion.li key={`redes_${i}`} variants={redesVariant}>
+                                        <motion.a className='cursor-pointer' target="_blank" href={`${item.link}`}>{item.name}</motion.a>
+                                    </motion.li>
+                                )
                             })}
                         </motion.ul>
                     </motion.div>                    

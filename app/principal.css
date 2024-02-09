@@ -60,6 +60,7 @@
 
 .card-work.expanded .card-titulo{
     color: var(--bg-color);
+    text-shadow: -2px 2px 0px var(--primary-color);
 }
 
 .card-boton{
@@ -182,6 +183,13 @@
     text-shadow: -2px 2px 0px var(--primary-color);
     -webkit-text-stroke-color: var(--primary-color);
     -webkit-text-stroke-width: 2px;
+}
+
+.word-resalta-peq{
+    color: var(--secondary-color);
+    cursor: pointer;
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 1px;
 }
 
 .filas-texto{

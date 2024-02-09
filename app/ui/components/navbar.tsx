@@ -27,7 +27,7 @@ export default function NavBar(){
             y:2,
             boxShadow: "-0px 0px 0px 0px rgba(0,0,0,1)",
             transition:{
-                duration:0.2,
+                duration:0.1,
                 ease:'linear'
             }
         },
