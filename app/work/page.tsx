@@ -48,7 +48,7 @@ export default function Work(){
     }
     
     return(
-        <motion.div layout layoutRoot className='w-[100svw] sm:px-[100px] px-[20px] flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center overflow-scroll sm:max-h-[100svh] max-h-[100svh] p-[20px]'>
+        <motion.div layout layoutRoot className='w-[100svw] sm:px-[100px] px-[20px] flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center overflow-scroll sm:max-h-[100svh] max-h-[80svh] p-[20px]'>
             
             {areas.map((area,i)=>{
                 return(
