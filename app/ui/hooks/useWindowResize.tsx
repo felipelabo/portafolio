@@ -1,25 +1,30 @@
+"use client"
 import { useEffect, useRef, useState } from "react"
 
-const useWindowResize = (maxWindowSize:number) => {
-  const [isMobileSize, setIsMobileSize] = useState(window.innerWidth <= maxWindowSize)
-  const prevWidth = useRef(window.innerWidth)
+const useWindowResize = (maxWindowSize: number) => {
+  const isClient = typeof window === 'object';  // Verificar si estamos en el entorno del navegador
+  const [isMobileSize, setIsMobileSize] = useState(isClient && window.innerWidth <= maxWindowSize);
+  const prevWidth = useRef(isClient ? window.innerWidth : 0);
 
+  
   useEffect(() => {
     const handleResize = () => {
-      const currWidth = window.innerWidth
-      if (currWidth <= maxWindowSize && prevWidth.current > maxWindowSize){
-        setIsMobileSize(true)
+      const currWidth = isClient ? window.innerWidth : 0;
+      if (currWidth <= maxWindowSize && prevWidth.current > maxWindowSize) {
+        setIsMobileSize(true);
       } else if (currWidth > maxWindowSize && prevWidth.current <= maxWindowSize) {
-        setIsMobileSize(false)
+        setIsMobileSize(false);
       }
-      prevWidth.current = currWidth
+      prevWidth.current = currWidth;
+    };
+
+    if (isClient) {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     }
+  }, [maxWindowSize, isClient]);
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [maxWindowSize])
-
-  return isMobileSize
+  return isMobileSize;
 }
 
 export default useWindowResize
