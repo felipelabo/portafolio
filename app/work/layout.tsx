@@ -17,7 +17,7 @@ export default function workLayout({children}: {children: React.ReactNode}) {
             animate="animate"
             exit="exit"
         >
-            <motion.div className="w-full mt-[8svh]">
+            <motion.div className="w-full mt-[9svh]">
                 <motion.h1 className="texto-titulos text-[10svw] sm:text-[7svw]">Trabajos</motion.h1>
             </motion.div>
             {children}
