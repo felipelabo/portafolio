@@ -13,7 +13,7 @@ Parte de mi trabajo:
 6. Soporte y asistencia en todos los modulos y funcionamiento de nuestras plataformas
 `;
 
-export const electronica:string = `Me desarrollé como ingeniero electrónico en una empresa de ingeniería especializada en proporcionar soluciones de telemetría tanto para el sector minero como para el agro.
+export const electronica:string = `Me desarrollé como ingeniero electrónico por 3 años en una empresa de ingeniería especializada en proporcionar soluciones de telemetría tanto para el sector minero como para el agro.
 
 Mi principal proyecto fue liderar el desarrollo de un innovador sistema de medición de temperatura mediante radiofrecuencia destinado a viñedos.
 

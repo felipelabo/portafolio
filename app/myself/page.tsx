@@ -20,13 +20,8 @@ export default function Myself(){
     ]
 
     return(
-        <div className='w-[100svw] sm:mt-[8svh] mt-[3svh] flex sm:flex-row flex-col h-[100svh] overflow-scroll'>
+        <div className='w-[100svw] sm:mt-[8svh] mt-[3svh] flex sm:flex-row flex-col overflow-scroll'>
             <div className="sm:w-2/3 w-full flex justify-center sm:mb-0 mb-[15px]">
-                {/*<div className="card-myself w-[60%] h-[80%] p-[40px]">
-                    <div className="card-body h-full p-[8px]">
-                        <p>{texto}</p>
-                    </div>
-                </div>*/}
                 <div className="sm:text-[1.7svw] text-[4.5svw] h-full px-[30px] text-justify">
                     <p className='whitespace-pre-wrap'>{biografia}</p>
                 </div>

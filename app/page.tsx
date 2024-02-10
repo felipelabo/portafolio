@@ -13,13 +13,13 @@ export default function Home() {
 
   return(
     <motion.div 
-      className='w-[100vw] h-[100vh] flex justify-center items-center'
+      className='w-[100vw] h-[100vh] flex justify-center items-center relative overflow-hidden'
       variants={variant}
       initial="hidden"
       animate="animate"
       exit="exit"
     >
-      <motion.div className='w-[100vw] flex justify-center items-center z-10 py-[100px] bg-gradiente'>
+      <motion.div className='w-[100svw] overflow-hidden flex justify-center items-center z-10 py-[100px] bg-gradiente'>
         <motion.h1 className='texto-portada'>
           Desarrollador<motion.br/>
           <motion.span className='texto-portada-var'>Web</motion.span>
