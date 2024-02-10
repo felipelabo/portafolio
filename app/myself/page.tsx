@@ -34,9 +34,9 @@ export default function Myself(){
             <div className="sm:w-1/3 w-full sm:px-0 px-[30px]">
                 <h1 className="sm:text-[2svw] text-[6svw] mb-[10px] word-resalta-peq">Timeline de Felipe</h1>
                 <ul>
-                    {timeline.map(item=>{
+                    {timeline.map((item,n)=>{
                         return (
-                            <li className="flex">
+                            <li key={`line_${n}`} className="flex">
                                 <div>
                                     <svg id="chart" width="10" height="50">
                                         <line className="timeline-linea" x1="5" y1="0" x2="5" y2="50"></line>

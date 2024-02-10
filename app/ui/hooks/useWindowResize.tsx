@@ -17,7 +17,7 @@ const useWindowResize = (maxWindowSize:number) => {
 
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  }, [])
+  }, [maxWindowSize])
 
   return isMobileSize
 }

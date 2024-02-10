@@ -52,13 +52,14 @@ export default function Work(){
             
             {areas.map((area,i)=>{
                 return(
-                    <motion.div className="w-full ">
+                    <motion.div key={`area_${i}`} className="w-full ">
                         <motion.h1 className="word-resalta text-[10svw] sm:text-[5svw]">{area.titulo}</motion.h1>
                         <motion.div layout layoutRoot className='w-full flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center p-[20px]'>
-                            {trabajos.map(item=>{
+                            {trabajos.map((item,k)=>{
                                 if(area.codigo == item.codigo){
                                     return(
                                         <CardWork
+                                            key={`card_${k}`}
                                             id={item.id} 
                                             texto={item.titulo}
                                             boton={item.boton}
