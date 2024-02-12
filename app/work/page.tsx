@@ -48,13 +48,13 @@ export default function Work(){
     }
     
     return(
-        <motion.div layout layoutRoot className='w-[100svw] sm:px-[100px] px-[20px] flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center overflow-scroll sm:max-h-[100svh] max-h-[80svh] p-[20px]'>
+        <motion.div layout layoutRoot className='w-[100svw] sm:px-[100px] px-[20px] flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center overflow-scroll sm:max-h-[100svh] h-full mb-[50px] sm:mb-0 p-[20px]'>
             
             {areas.map((area,i)=>{
                 return(
-                    <motion.div key={`area_${i}`} className="w-full ">
-                        <motion.h1 className="word-resalta text-[7svw] sm:text-[5svw]">{area.titulo}</motion.h1>
-                        <motion.div layout layoutRoot className='w-full flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center p-[20px]'>
+                    <motion.div key={`area_${i}`} className="w-full sm:flex sm:items-center ">
+                        <motion.h1 className="word-resalta text-[7svw] sm:text-[3svw] sm:w-[30%]">{area.titulo}</motion.h1>
+                        <motion.div layout layoutRoot className='w-full sm:w-[70%] flex  sm:flex-wrap sm:flex-row flex-col sm:justify-start justify-start sm:items-stretch items-center p-[20px]'>
                             {trabajos.map((item,k)=>{
                                 if(area.codigo == item.codigo){
                                     return(
@@ -65,7 +65,6 @@ export default function Work(){
                                             boton={item.boton}
                                             selectId={selectId}
                                             selected={selectedId}
-                                            width="30%"
                                         ></CardWork>
                                     )
                                 }

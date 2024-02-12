@@ -45,7 +45,7 @@ export default function NavBar(){
 
     return (
         <>
-            <motion.div className="fixed w-[100svw] flex mx-auto justify-between items-center p-2 z-50">
+            <motion.nav className="fixed w-[100svw] flex mx-auto justify-between items-center p-2 z-50">
                 {/*Logo*/}
                 <motion.div className="p-3 ml-2">
                     <motion.button
@@ -64,7 +64,8 @@ export default function NavBar(){
                 >
                     Menú
                 </motion.button>
-            </motion.div>
+                
+            </motion.nav>         
             <AnimatePresence>
                 {show && <Menu handleShow={handleShow} show={show}/>}
             </AnimatePresence>            

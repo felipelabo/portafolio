@@ -22,6 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-[--bg-color] ${khand.className}`}>
+        <div
+          className="navbar-bottom w-[100svw] sm:h-[13svh] h-[10svh] z-30 fixed"
+        ></div>
         <NavBar/>
           {children}
       </body>

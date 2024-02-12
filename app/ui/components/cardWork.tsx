@@ -47,15 +47,15 @@ export default function CardWork({width,texto,boton,id,selected,selectId}:CardWo
             <motion.div 
                 key={id} 
                 layoutId={id} 
-                className={`card-work mx-[10px] flex justify-center mb-[15px] sm:w-[30%] w-[80%] cursor-pointer`}
+                className={`card-work mx-[10px] flex justify-center mb-[15px] sm:w-[40%] w-[80%] cursor-pointer`}
                 onClick={()=>selectId(id)}
                 variants={hover}
                 whileHover={!selected ? 'hover' : 'tap'}
                 exit={'exit'}
             >
-                <motion.div className="card-body flex p-[15px] flex-col justify-between h-full">
+                <motion.div className="card-body flex sm:p-[15px] p-[5px] flex-col justify-between h-full">
                     <motion.div className="w-full min-h-[10svh] flex justify-center items-center">
-                        <motion.p className="card-texto mb-[10px]">{texto}</motion.p>
+                        <motion.p className="text-center sm:text-[1.5em] text-[1em] mb-[10px]">{texto}</motion.p>
                     </motion.div>
                     {/*<motion.div className="w-full flex justify-center items-center">
                         <motion.button 
