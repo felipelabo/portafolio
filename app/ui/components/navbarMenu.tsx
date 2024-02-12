@@ -61,7 +61,7 @@ export default function Menu({handleShow,show}:Menu){
 
     return(
         <motion.div 
-            className="w-[100vw] h-[100vh] bg-[--secondary-color] absolute z-40"
+            className="w-[100vw] h-[100svh] bg-[--secondary-color] absolute z-40"
             initial={"hidden"}
             animate={"visible"}
             exit={"exit"}
@@ -69,9 +69,9 @@ export default function Menu({handleShow,show}:Menu){
             transition={{ duration: 0.2}}
         >
             <motion.div className="flex flex-col sm:flex-row">
-                <motion.div className="sm:w-1/3 w-full sm:h-[90vh] h-[30svh] sm:order-[1] order-[2] sm:mt-[10vh]">
+                <motion.div className="sm:w-1/3 w-full sm:h-[90svh] h-[30svh] sm:order-[1] order-[2] sm:mt-[10svh]">
                     <motion.div className="flex flex-col items-star justify-end h-full">
-                        <motion.ul className="texto-menu-contacto mb-[5vh] ml-[2vw]">
+                        <motion.ul className="texto-menu-contacto mb-[5svh] ml-[2vw]">
                             {contacto.map((item,i)=>{
                                 return (
                                     <motion.li key={`redes_${i}`} variants={redesVariant}>

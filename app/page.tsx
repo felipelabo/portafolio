@@ -13,7 +13,7 @@ export default function Home() {
 
   return(
     <motion.div 
-      className='w-[100vw] h-[100vh] flex justify-center items-center relative overflow-hidden'
+      className='w-[100vw] h-[100svh] flex justify-center items-center relative overflow-hidden'
       variants={variant}
       initial="hidden"
       animate="animate"

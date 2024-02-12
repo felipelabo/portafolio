@@ -60,14 +60,14 @@ export const variantInfo = {
     start:{
         opacity:0,
         transition:{
-            delay:0.5,
+            delay:0.55,
             duration:0.3
         }
     },
     animate:{
         opacity:1,
         transition:{
-            delay:0.5,
+            delay:0.55,
             duration:0.3
         }
     },

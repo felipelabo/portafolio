@@ -11,7 +11,7 @@ export default function myselfLayout({children}: {children: React.ReactNode}) {
 
     return(
         <motion.div 
-            className='w-[100vw] h-[100vh] flex flex-col sm:px-[2svw] px-[5svw] sm:pb-0 pb-[10svh] items-center'
+            className='w-[100vw] h-[100svh] flex flex-col sm:px-[2svw] px-[5svw] pb-[2svw] items-center'
             variants={variantPage}
             initial="start"
             animate="animate"

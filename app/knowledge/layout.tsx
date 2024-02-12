@@ -11,7 +11,7 @@ export default function workLayout({children}: {children: React.ReactNode}) {
 
     return(
         <motion.div 
-            className='w-[100vw] h-[100vh] flex flex-col p-[2svw] items-center'
+            className='w-[100vw] h-[100svh] flex flex-col p-[2svw] items-center'
             variants={variantPage}
             initial="start"
             animate="animate"

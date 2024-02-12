@@ -37,7 +37,6 @@ export default function Knownledge(){
                             return (
                                 <motion.button 
                                     key={`letras_${j}`} 
-                                    whileTap={{x:-2,y:2,textShadow:'0px 0px 0px var(--primary-color)',transition:{duration:0.1}}} 
                                     className="word-resalta w-full text-[11svw]" 
                                     onClick={()=>setSelectedId(palabra)} 
                                     variants={variant} 
