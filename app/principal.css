@@ -2,11 +2,14 @@
 /*TEXTO*/
 
 .texto-portada{
-    font-size: 12svw;
     line-height: 1;
     font-weight: 800;
     -webkit-text-stroke-color: var(--primary-color);
     -webkit-text-stroke-width: 2px;
+}
+
+.subtexto-portada{
+    line-height: 1;
 }
 
 .texto-portada-var{
@@ -68,6 +71,7 @@
     border-style: solid;
     border-width: 3px;
     border-radius: 15px;
+    background-color: var(--bg-color);
 }
 
 .card-work.expanded .card-boton{
@@ -86,6 +90,15 @@
 
 .card-titulo{
     text-align: center;
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 1px;
+    text-shadow: -2px 2px 0px var(--primary-color);
+}
+
+.card-tag{    
+    border-radius: 15px;
+    color: var(--bg-color);
+    background-color: var(--primary-color);
 }
 
 /*CARD MYSELF*/
@@ -146,6 +159,15 @@
 .bg-gradiente{
     background: rgb(240,240,231);
     background: radial-gradient(circle, rgba(240,240,231,1) 55%, rgba(0,0,0,0) 100%);
+}
+
+.boton-portada{
+    background-color: var(--secondary-color);
+    border-width: 3px;
+    border-radius: 15px;
+    border-color: var(--primary-color);
+    padding:2px 15px;
+    transform: rotate(-10deg);
 }
 
 /* Navbar */

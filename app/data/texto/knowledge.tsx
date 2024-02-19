@@ -116,8 +116,8 @@ export const listaPalabras: Known[] = [
         resalta:[2,5]
     },
     {
-        texto:'AWS Lamnda S3 QuickSight Cloud-Computing SES',
-        resalta:[5]
+        texto:'AWS Lamnda S3 Cloud-Computing QuickSight SES',
+        resalta:[4]
     },
     {
         texto:'Visual Studio Herramientas Git Visual Studio Git',
@@ -265,6 +265,9 @@ export const contenido: Contenido[] = [
             },
             {
                 titulo:'DBeaver',
+            },
+            {
+                titulo:'Postman',
             }
         ]
     }

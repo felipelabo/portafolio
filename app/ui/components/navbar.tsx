@@ -2,10 +2,11 @@
 import Menu from "@/app/ui/components/navbarMenu"
 import {useState} from 'react'
 import {AnimatePresence, motion} from 'framer-motion'
-import Link from 'next/link'
+import {useRouter} from 'next/navigation'
 
 export default function NavBar(){
 
+    const router = useRouter();
     const [show,setShow] = useState(false)
 
     const handleShow = () =>{
@@ -53,9 +54,10 @@ export default function NavBar(){
                         variants={hover}
                         whileTap={'tap'}
                         initial={false}
+                        onClick={() => router.push('/')}
                         
                     >
-                        <Link href={'/'}>Felipe Laboren</Link>
+                        Felipe Laboren
                     </motion.button>
                 </motion.div>
                 <motion.button
