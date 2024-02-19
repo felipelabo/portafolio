@@ -176,7 +176,7 @@ export default function Work(){
                         </motion.div>
                         <motion.div>
                             <motion.p className="flex flex-wrap">
-                                {trabajo.tags.map(tag=><motion.span className="card-tag sm:text-[1.3svw] text-[4svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
+                                {trabajo.tags.map((tag,t)=><motion.span key={`tag_${t}_${trabajo.id}`} className="card-tag sm:text-[1.3svw] text-[4svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
                             </motion.p>
                         </motion.div>
                     </motion.div>
@@ -225,7 +225,7 @@ export default function Work(){
                                 </motion.div>
                                 <motion.div>
                                     <motion.p className="flex flex-wrap">
-                                        {item.tags.map(tag=><motion.span className="card-tag sm:text-[1.3svw] text-[4svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
+                                        {item.tags.map((tag,t)=><motion.span key={`tag_${t}_${item.id}`} className="card-tag sm:text-[1.3svw] text-[4svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
                                     </motion.p>
                                 </motion.div>
                                 <motion.div className="card-bottom row-span-1 flex items-end justify-center">
@@ -261,7 +261,7 @@ export default function Work(){
                                 
                                 <motion.div className="col-span-2 flex items-center">
                                     <motion.p className="flex flex-wrap">
-                                        {item.tags.map(tag=><motion.span className="card-tag sm:text-[1.3svw] text-[3svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
+                                        {item.tags.map((tag,t)=><motion.span key={`tag_${t}_${item.id}`} className="card-tag sm:text-[1.3svw] text-[3svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
                                     </motion.p>
                                 </motion.div>
                                 <motion.div className="card-bottom row-span-1 flex items-center justify-center col-span-1">
