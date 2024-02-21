@@ -129,30 +129,6 @@ export default function Work(){
     return(
         <motion.div layout layoutRoot className='w-[100svw] sm:px-[100px] px-[20px] flex sm:flex-wrap sm:flex-row flex-col sm:justify-center justify-start sm:items-stretch items-center overflow-scroll sm:max-h-[100svh] h-full  p-[20px]'>
             
-            {/*areas.map((area,i)=>{
-                return(
-                    <motion.div key={`area_${i}`} className="w-full sm:flex sm:items-center ">
-                        <motion.h1 className="word-resalta text-[7svw] sm:text-[3svw] sm:w-[30%]">{area.titulo}</motion.h1>
-                        <motion.div layout layoutRoot className='w-full sm:w-[70%] flex  sm:flex-wrap sm:flex-row flex-col sm:justify-start justify-start sm:items-stretch items-center p-[20px]'>
-                            {trabajos.map((item,k)=>{
-                                if(area.codigo == item.codigo){
-                                    return(
-                                        <CardWork
-                                            key={`card_${k}`}
-                                            id={item.id} 
-                                            texto={item.titulo}
-                                            boton={item.boton}
-                                            selectId={selectId}
-                                            selected={selectedId}
-                                        ></CardWork>
-                                    )
-                                }
-                            })}
-                        </motion.div>
-                    </motion.div>
-                )
-            })*/}
-
             {trabajoss.map((trabajo)=>{
                 return(
                     <motion.div 
@@ -176,7 +152,7 @@ export default function Work(){
                         </motion.div>
                         <motion.div>
                             <motion.p className="flex flex-wrap">
-                                {trabajo.tags.map((tag,t)=><motion.span key={`tag_${t}_${trabajo.id}`} className="card-tag sm:text-[1.3svw] text-[4svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
+                                {trabajo.tags.map((tag,t)=><motion.span key={`tag_${t}_${trabajo.id}`} className="card-tag sm:text-[1.3svw] text-[3svw] mx-[2px] mb-[3px] px-[10px]">{tag}</motion.span>)}
                             </motion.p>
                         </motion.div>
                     </motion.div>
@@ -184,25 +160,7 @@ export default function Work(){
             })}
 
             <AnimatePresence>
-                {/*selectedId && item && 
-                    <motion.div key={`modal_${item.id}`} layoutId={item.id} className={`card-work expanded flex flex-wrap mx-[10px] mb-[15px] sm:w-[85svw] w-[90svw] sm:h-[60svh] h-[70svh] p-[15px] absolute`}>
-                        <motion.div className="card-header w-full flex justify-between">
-                            <motion.h1 className="card-titulo text-left sm:text-[2svw] text-[5.5svw]">{item.titulo}</motion.h1>
-                            <motion.h1 className="card-titulo text-right sm:text-[2svw] text-[5.5svw]">{`${item.anno} ${item.duracion ? `(${item.duracion})` : ''}`}</motion.h1>
-                        </motion.div>                        
-                        <motion.div className="card-body w-full flex p-[15px] flex-col justify-between">
-                            <motion.div className="w-full sm:max-h-[37svh] max-h-[40svh] flex-1 overflow-scroll p-[10px]">
-                                <motion.p className="sm:text-[1.7svw] text-[4svw] mb-[10px] text-justify whitespace-pre-wrap">{item.texto}</motion.p>
-                            </motion.div>
-                            <motion.div className="w-full flex justify-center items-center  p-[10px]">
-                                <motion.button 
-                                    className="card-boton px-[15px] py-[8px]"
-                                    onClick={()=>setSelectedId(null)}
-                                >{item.boton}</motion.button>
-                            </motion.div>
-                        </motion.div>
-                    </motion.div>
-                */}
+                
                 {selectedId && item && 
                     <motion.div 
                         key={`modal_${item.id}`} layoutId={item.id} 
@@ -243,19 +201,19 @@ export default function Work(){
                         </motion.div>}
                         
                         {isMobile && <motion.div className={`card-body w-full flex p-[15px] flex-col justify-between row-span-6
-                            grid grid-rows-6 grid-cols-1
+                            grid grid-rows-5 grid-cols-1
                         `}>
                             <motion.div className="row-span-1 text-[var(--bg-color)]">
                                     <motion.h2 className="sm:text-[1.8svw] text-[5svw]">{item.subtitulo}</motion.h2>
                                     {item.empresa && <motion.h2 className="sm:text-[1.8svw] text-[5svw]">Empresa: {item.empresa}</motion.h2>}
                             </motion.div>
 
-                            <motion.div className="w-full overflow-scroll col-span-3 row-span-4">
+                            <motion.div className="w-full overflow-scroll col-span-3 row-span-3">
                                     <motion.p className="sm:text-[1.7svw] text-[4svw] mb-[10px] text-justify whitespace-pre-wrap">{item.texto}</motion.p>
                             </motion.div>
 
                             <motion.div className={`w-full overflow-scroll p-[10px] col-span-1 row-span-1
-                                grid grid-rows-1 grid-cols-3
+                                grid grid-rows-1 grid-cols-3 gap-y-[10px]
                             `}>
                                 
                                 
